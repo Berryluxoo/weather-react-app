@@ -65,9 +65,16 @@ export default function Weather(props) {
         </div>
         <footer>
           <p className="text-start">
-            This project was coded by <a href="">Lina Burkalo</a> and is{" "}
-            <a href="">open-sourced on GitHub</a> and{" "}
-            <a href="">hosted on Netlify</a>{" "}
+            This project was coded by{" "}
+            <a href="https://www.instagram.com/berryluxo/">Lina Burkalo</a> and
+            is{" "}
+            <a href="https://github.com/Berryluxoo/weather-react-app">
+              open-sourced on GitHub
+            </a>{" "}
+            and{" "}
+            <a href="https://friendly-crisp-b14267.netlify.app/">
+              hosted on Netlify
+            </a>{" "}
           </p>
         </footer>
       </div>
