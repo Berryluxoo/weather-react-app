@@ -29,7 +29,9 @@ setReady(false);
                   <SetForecastDay forecast={forecastData[index]} />
                 </div>
               );
-            }
+            } else {
+              return null;
+            } 
           })}
         </div>
       </div>
