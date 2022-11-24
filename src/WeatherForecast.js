@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SetForecastDay from "./SetForecastDay";
+import { ThreeDots } from "react-loader-spinner";
 
 import "./WeatherForecast.css";
 
@@ -9,8 +10,8 @@ export default function WeatherForecast(props) {
   const [forecastData, setForecastData] = useState(null);
 
   useEffect(() => {
-setReady(false);
-  }, [props])
+    setReady(false);
+  }, [props]);
 
   function handleResponse(response) {
     console.log(response.data.daily);
@@ -31,7 +32,7 @@ setReady(false);
               );
             } else {
               return null;
-            } 
+            }
           })}
         </div>
       </div>
@@ -41,6 +42,19 @@ setReady(false);
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.weatherDate.city}&key=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
-    return "Loading...";
+    return (
+      <div className="loader">
+        <ThreeDots
+          height="70"
+          width="70"
+          radius="8"
+          color="#9477c3"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+      </div>
+    );
   }
 }
