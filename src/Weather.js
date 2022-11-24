@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WearherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./Weather.css";
 
@@ -9,7 +10,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
     setWetherDate({
       ready: true,
       temperature: Math.round(response.data.temperature.current),
@@ -62,9 +62,10 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo weatherDate={weatherDate} />
+          <WeatherForecast weatherDate={weatherDate} />
         </div>
         <footer>
-          <p className="text-start">
+          <p>
             This project was coded by{" "}
             <a href="https://www.instagram.com/berryluxo/">Lina Burkalo</a> and
             is{" "}
@@ -72,7 +73,7 @@ export default function Weather(props) {
               open-sourced on GitHub
             </a>{" "}
             and{" "}
-            <a href="https://friendly-crisp-b14267.netlify.app/">
+            <a href="https://symphonious-creponne-bcacc1.netlify.app/">
               hosted on Netlify
             </a>{" "}
           </p>

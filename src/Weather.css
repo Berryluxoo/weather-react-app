@@ -14,13 +14,14 @@
 }
 
 .Weather footer {
+  text-align: left;
   font-size: 12px;
   margin-top: 10px;
 }
 
 .Weather h1 {
   font-size: 26px;
-  font-weight: 100;
+  font-weight: 600;
   margin: 25px 0 0;
   line-height: 29px;
   color: #c764a0;
@@ -71,4 +72,17 @@
   outline: none;
   border: #9477c3;
   box-shadow: 0 0 0 0.125rem #9477c3;
+}
+
+@media (max-width: 480px) {
+  .Weather footer {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .Weather .container {
+    text-align: center;
+    border: none;
+    background-color: #22222c;
+  }
 }

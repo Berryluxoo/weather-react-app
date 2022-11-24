@@ -1,0 +1,27 @@
+.WeatherForecast img {
+  height: 62px;
+}
+
+.WeatherForecast {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.WeatherForecast .max-temperature {
+    margin-right: 10px;
+    color: #64d971;
+}
+
+.WeatherForecast .min-temperature {
+    color: #64d971;
+ opacity: 0.7;
+}
+
+.WeatherForecast .week-day {
+  color: #c764a0;
+  font-weight: 600;
+}
+
+.WeatherForecast .day-box {
+    padding: 15px 15px 0 15px;
+}
