@@ -40,20 +40,21 @@ export default function WeatherForecast(props) {
   } else {
     const apiKey = "39eb7f89bb3093a4f1fdtd405b8fao9b";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.weatherDate.city}&key=${apiKey}&units=metric`;
+    console.log(apiUrl);
 
     axios.get(apiUrl).then(handleResponse);
     return (
-      <div className="loader">
-        <ThreeDots
-          height="70"
-          width="70"
-          radius="8"
-          color="#9477c3"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
+      <div class="d-flex justify-content-center">
+      <ThreeDots
+        height="70"
+        width="70"
+        radius="8"
+        color="#9477c3"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClassName=""
+        visible={true}
+      />
       </div>
     );
   }
